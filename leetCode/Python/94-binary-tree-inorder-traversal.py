@@ -10,4 +10,5 @@ class Solution:
         # data structure use recursive
         if not root:
             return []
+        # only concatenate list to list
         return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
