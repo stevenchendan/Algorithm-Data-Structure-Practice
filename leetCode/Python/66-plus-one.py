@@ -9,14 +9,16 @@ class Solution:
         if not digits:
           return []
         num_string = ""
-        num = 0
+        nums = 0
+        result = []
         for i in digits:
           num_string += str(i)
         
-        num = str(int(num_string) + 1)
+        nums = str(int(num_string) + 1)
         print(num)
-
-
+        for i in nums:
+          result.append(int(i))
+        return result
 
 
 
