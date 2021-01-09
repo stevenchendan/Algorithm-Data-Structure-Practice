@@ -28,4 +28,3 @@ class Solution:
 
 # Thinking for two pointer
 # only move the short pointer
-# 
