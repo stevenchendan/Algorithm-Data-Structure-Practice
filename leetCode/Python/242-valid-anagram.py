@@ -19,3 +19,26 @@ class Solution:
             if value != 0:
                 return False
         return True
+
+# solution 2 with two loop and dictionary
+class Solution2:
+    def isAnagram(self, s: 'str', t: 'str') -> 'bool':
+        # solution use dictionary
+        if len(s) != len(t):
+            return False
+        dic = {}
+        for i in s:
+            if i in dic:
+                dic[i] += 1
+            else:
+                dic[i] = 1
+        for j in t:
+            if j not in dic:
+                return False
+            else:
+                dic[j] -= 1
+                if dic[j] < 0:
+                    return False
+        return True
+        
+        
