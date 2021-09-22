@@ -3,6 +3,8 @@
 class Solution:
     def removeDuplicates(self, nums: 'List[int]') -> 'int':
         # solution 1
+        # time complexity: O(n)
+        # space complexity: O(1)
         # if not nums:
         #     return 0
         # elif len(nums) == 1:
@@ -15,6 +17,8 @@ class Solution:
         # return index
 
         # solution 2 two pointer
+        # time complexity: O(n)
+        # space complexity: O(1)
         # if not nums:
         #   return 0
         # i = 0
@@ -25,6 +29,8 @@ class Solution:
         # return i + 1
 
         # solution 3: two pointer
+        # time: O(n)
+        # space complex: O(1)
         if not nums:
             return 0
         length = len(nums)
