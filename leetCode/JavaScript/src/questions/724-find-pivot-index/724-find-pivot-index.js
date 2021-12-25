@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
- var pivotIndex = function(nums) {
+function pivotIndex(nums) {
   if (nums == undefined || nums.length < 1) {
       return -1;
   }
@@ -19,3 +19,5 @@
   }
   return -1;
 };
+
+export default pivotIndex;
