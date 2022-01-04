@@ -20,8 +20,8 @@ const readCharacters = function (read4) {
    * @return {number} The number of actual characters read
    */
   return function (buf, n) {
-    let temp = Array(4),
-      total = 0;
+    const temp = Array(4);
+    let total = 0;
 
     while (total < n) {
       let count = read4(temp);

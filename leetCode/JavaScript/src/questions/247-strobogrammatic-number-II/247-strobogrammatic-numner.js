@@ -4,6 +4,7 @@
  */
 const findStrobogrammatic = function (n) {
   const dp = [[""], ["0", "1", "8"]];
+
   for (let i = 2; i < n + 1; i++) {
     dp[i] = [];
     for (let center of dp[i - 2]) {
