@@ -9,9 +9,7 @@
   }
   
   let rightMultipleResult = 1;
-  const result = [];
-  
-  result[0] = 1;
+  const result = [1];
   
   //from left to right
   for (let i = 1; i < nums.length; i++) {
