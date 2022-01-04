@@ -13,3 +13,4 @@ describe('mutiple except iteslf', () => {
     expect(productExceptSelf([])).toEqual([]);
   });
 });
+
