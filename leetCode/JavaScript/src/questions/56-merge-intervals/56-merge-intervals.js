@@ -3,7 +3,7 @@
  * @param {number[][]} intervals
  * @return {number[][]}
  */
-const merge = function(intervals) {
+const merge = function (intervals) {
   if (intervals.length < 2) {
     return intervals;
   }
@@ -12,7 +12,7 @@ const merge = function(intervals) {
 
   let prev = intervals[0];
   const result = [];
-  
+
   for (let i = 0; i < intervals.length; i++) {
     const cur = intervals[i];
     if (cur[0] > prev[1]) {

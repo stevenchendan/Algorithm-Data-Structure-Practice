@@ -1,8 +1,19 @@
-import merge from "../56-merge-intervals"
+import merge from "../56-merge-intervals";
 
 describe("merge interval", () => {
   it("should merge all overlapping intervals", () => {
-    expect(merge([[1,3],[2,6],[8,10],[15,18]])).toEqual([[1,6],[8,10],[15,18]]);
+    expect(
+      merge([
+        [1, 3],
+        [2, 6],
+        [8, 10],
+        [15, 18],
+      ])
+    ).toEqual([
+      [1, 6],
+      [8, 10],
+      [15, 18],
+    ]);
   });
   it("should return empty string", () => {
     expect(merge([])).toEqual([]);

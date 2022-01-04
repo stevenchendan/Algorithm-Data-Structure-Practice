@@ -12,14 +12,14 @@ const climbStairs = function calculateHomeManyWaysClimbStairs(n) {
   //     dp[i] = dp[i - 2] + dp[i - 1];
   // }
   // return dp[n];
-  
+
   //solution 2: only store two temp variable
   let pre = 1;
   let cur = 1;
   for (let i = 2; i < n + 1; i++) {
-      const temp = cur;
-      cur = pre + cur;
-      pre = temp;
+    const temp = cur;
+    cur = pre + cur;
+    pre = temp;
   }
   return cur;
 };

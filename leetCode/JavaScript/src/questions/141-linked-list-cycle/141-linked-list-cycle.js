@@ -10,17 +10,17 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var hasCycle = function(head) {
+var hasCycle = function (head) {
   if (!head) {
-      return false;
+    return false;
   }
   seen = new Set();
   while (!!head) {
-      if (seen.has(head)) {
-          return true;
-      }
-      seen.add(head);
-      head = head.next;
+    if (seen.has(head)) {
+      return true;
+    }
+    seen.add(head);
+    head = head.next;
   }
   return false;
 };

@@ -4,11 +4,11 @@
  * @param {string} t
  * @return {string}
  */
- const minWindow = function(s, t) {
-  if(!s || !t) {
-      return '';
+const minWindow = function (s, t) {
+  if (!s || !t) {
+    return "";
   }
-    
+
   let targetOccurrence = {};
   let windowOccurrence = {};
   for (let c of t) {
@@ -19,7 +19,7 @@
   let valid = 0;
   let resultStart = 0,
     resultLength = Number.MAX_VALUE;
-    
+
   while (fast < s.length) {
     const c = s[fast];
     fast++;
@@ -44,7 +44,9 @@
       }
     }
   }
-  return resultLength == Number.MAX_VALUE ? "" : s.substr(resultStart, resultLength);
+  return resultLength == Number.MAX_VALUE
+    ? ""
+    : s.substr(resultStart, resultLength);
 };
 
 export default minWindow;

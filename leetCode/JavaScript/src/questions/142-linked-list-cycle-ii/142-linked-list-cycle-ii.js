@@ -10,17 +10,16 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var detectCycle = function(head) {
+var detectCycle = function (head) {
   visited = new Set();
   node = head;
   while (!!node) {
-      if (visited.has(node)) {
-          return node
-      }
-      else {
-          visited.add(node);
-          node = node.next;
-      }
+    if (visited.has(node)) {
+      return node;
+    } else {
+      visited.add(node);
+      node = node.next;
+    }
   }
   return null;
 };

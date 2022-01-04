@@ -10,32 +10,32 @@
  * @param {Node} node
  * @return {Node}
  */
- var cloneGraph = function(node) {
+var cloneGraph = function (node) {
   if (node == null) {
-      return;
+    return;
   }
-  
+
   let visitedNode = new Map();
-  
+
   const dfsClone = (n) => {
-      // handle edge case
-      if (n == null) {
-          return null;
-      }
-      if (visitedNode.has(n.val)) {
-          return visitedNode.get(n.val);
-      }
-      
-      const clonedNode = new Node(n.val, []);
-      visitedNode.set(n.val, clonedNode);
-      
-      for (const neighbor of n.neighbors) {
-          const clonedNeighbor = dfsClone(neighbor);
-          clonedNode.neighbors.push(clonedNeighbor);
-      }
-      
-      return clonedNode;
-  }
+    // handle edge case
+    if (n == null) {
+      return null;
+    }
+    if (visitedNode.has(n.val)) {
+      return visitedNode.get(n.val);
+    }
+
+    const clonedNode = new Node(n.val, []);
+    visitedNode.set(n.val, clonedNode);
+
+    for (const neighbor of n.neighbors) {
+      const clonedNeighbor = dfsClone(neighbor);
+      clonedNode.neighbors.push(clonedNeighbor);
+    }
+
+    return clonedNode;
+  };
 
   return dfsClone(node);
 };
