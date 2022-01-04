@@ -1,5 +1,5 @@
 /**
- * Question: https://leetcode.com/problems/fibonacci-number/
+ * https://leetcode.com/problems/fibonacci-number/
  * @param {number} n
  * @return {number}
  */
