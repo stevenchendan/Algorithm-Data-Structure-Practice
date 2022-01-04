@@ -15,7 +15,7 @@ describe("merge interval", () => {
       [15, 18],
     ]);
   });
-  it("should return empty string", () => {
+  it("should return empty array", () => {
     expect(merge([])).toEqual([]);
   });
 });
