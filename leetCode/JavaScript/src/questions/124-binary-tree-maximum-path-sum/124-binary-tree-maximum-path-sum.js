@@ -11,7 +11,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const maxPathSum = (root) => {
+const maxPathSum = function(root) {
   if (root == null) {
     return 0;
   }
@@ -37,3 +37,5 @@ const maxPathSum = (root) => {
   maxPath(root);
   return maxSum;
 };
+
+export default maxPathSum;
