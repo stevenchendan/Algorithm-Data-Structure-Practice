@@ -6,7 +6,7 @@
  */
 const minWindow = function (s, t) {
   if (!s || !t) {
-    return "";
+    return '';
   }
 
   const targetOccurrence = {};
@@ -37,7 +37,7 @@ const minWindow = function (s, t) {
       const d = s[slow];
       slow++;
       if (targetOccurrence[d]) {
-        if (windowOccurrence[d] == targetOccurrence[d]) {
+        if (windowOccurrence[d] === targetOccurrence[d]) {
           valid--;
         }
         windowOccurrence[d]--;
@@ -45,7 +45,7 @@ const minWindow = function (s, t) {
     }
   }
   return resultLength == Number.MAX_VALUE
-    ? ""
+    ? ''
     : s.substr(resultStart, resultLength);
 };
 

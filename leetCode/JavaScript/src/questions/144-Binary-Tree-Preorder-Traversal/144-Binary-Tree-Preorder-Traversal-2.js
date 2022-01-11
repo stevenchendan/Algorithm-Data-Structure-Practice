@@ -19,10 +19,10 @@ const preorderTraversal = function (root, result = []) {
   while (stack.length) {
     const item = stack.pop();
     result.push(item.val);
-    if (!!item.right) {
+    if (item.right) {
       stack.push(item.right);
     }
-    if (!!item.left) {
+    if (item.left) {
       stack.push(item.left);
     }
   }
