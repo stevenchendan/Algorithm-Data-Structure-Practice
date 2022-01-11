@@ -11,11 +11,11 @@ const productExceptSelf = function (nums) {
   let rightMultipleResult = 1;
   const result = [1];
 
-  //from left to right
+  // from left to right
   for (let i = 1; i < nums.length; i++) {
     result[i] = result[i - 1] * nums[i - 1];
   }
-  //from right to left
+  // from right to left
   for (let j = nums.length - 1; j >= 0; j--) {
     result[j] = rightMultipleResult * result[j];
     rightMultipleResult = nums[j] * rightMultipleResult;

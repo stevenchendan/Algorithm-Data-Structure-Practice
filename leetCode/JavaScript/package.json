@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "lint": "eslint --fix \"**/*.js\"",
     "coverage": "npm run test -- --coverage"
   },
   "author": "",

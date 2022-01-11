@@ -10,12 +10,12 @@
  * @param {Node} node
  * @return {Node}
  */
-var cloneGraph = function (node) {
+const cloneGraph = function (node) {
   if (node == null) {
     return;
   }
 
-  let visitedNode = new Map();
+  const visitedNode = new Map();
 
   const dfsClone = (n) => {
     // handle edge case

@@ -6,11 +6,11 @@
  */
 const minSubArrayLen = function (target, nums) {
   let result = nums.length + 1;
-  let slow = 0,
-    fast = 0,
-    sum = 0;
+  let slow = 0;
+  let fast = 0;
+  let sum = 0;
 
-  //slide window
+  // slide window
   while (fast < nums.length) {
     sum += nums[fast++];
 

@@ -10,12 +10,12 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var hasCycle = function (head) {
+const hasCycle = function (head) {
   if (!head) {
     return false;
   }
   seen = new Set();
-  while (!!head) {
+  while (head) {
     if (seen.has(head)) {
       return true;
     }

@@ -9,14 +9,14 @@ const isAnagram = function (s, t) {
   }
   count = {};
   for (const char of s) {
-    if (!!count[char]) {
+    if (count[char]) {
       count[char] += 1;
     } else {
       count[char] = 1;
     }
   }
   for (const char of t) {
-    if (!!count[char]) {
+    if (count[char]) {
       count[char] -= 1;
     } else {
       return false;
@@ -27,5 +27,6 @@ const isAnagram = function (s, t) {
       return false;
     }
   });
+
   return true;
 };

@@ -4,11 +4,11 @@
  * @param {number} k
  * @return {number}
  */
-var subarraySum = function (nums, k) {
-  //pre sum solution
+const subarraySum = function (nums, k) {
+  // pre sum solution
   const map = { 0: 1 };
-  let preSum = 0,
-    count = 0;
+  let preSum = 0;
+  let count = 0;
 
   for (let i = 0; i < nums.length; i++) {
     preSum += nums[i];

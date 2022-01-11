@@ -3,8 +3,8 @@
  * @return {number[][]}
  */
 const permute = function (nums) {
-  const result = [],
-    path = [];
+  const result = [];
+  const path = [];
 
   const permuteBacktracking = function (n, k, used) {
     if (k === path.length) {

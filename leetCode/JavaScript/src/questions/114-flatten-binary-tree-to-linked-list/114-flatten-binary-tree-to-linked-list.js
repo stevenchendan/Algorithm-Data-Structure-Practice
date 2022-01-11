@@ -15,10 +15,10 @@ const flatten = function (root) {
   const list = [];
   preorderTraversal(root, list);
   console.log(list);
-  //loop tree
+  // loop tree
   for (let i = 1; i < list.length; i++) {
-    const prev = list[i - 1],
-      curr = list[i];
+    const prev = list[i - 1];
+    const curr = list[i];
     prev.left = null;
     prev.right = curr;
   }

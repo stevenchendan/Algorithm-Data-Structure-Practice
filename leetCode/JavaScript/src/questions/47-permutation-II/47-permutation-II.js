@@ -7,8 +7,8 @@ const permuteUnique = function (nums) {
   nums.sort((a, b) => {
     return a - b;
   });
-  const result = [],
-    path = [];
+  const result = [];
+  const path = [];
 
   const permuteUniqueBacktracking = function (used) {
     if (nums.length === path.length) {

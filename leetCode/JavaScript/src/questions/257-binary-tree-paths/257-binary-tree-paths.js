@@ -11,28 +11,29 @@
  * @param {TreeNode} root
  * @return {string[]}
  */
-var binaryTreePaths = function (root) {
+const binaryTreePaths = function (root) {
   if (!root) {
     return root;
   }
 
-  //dfs
-  let result = [];
+  // dfs
+  const result = [];
   const getPath = function (node, path) {
     if (node.left === null && node.right === null) {
       path += node.val;
       result.push(path);
       return;
     }
-    path += node.val + "->";
-    if (!!node.left) {
+    path += `${node.val}->`;
+    if (node.left) {
       getPath(node.left, path);
     }
-    if (!!node.right) {
+    if (node.right) {
       getPath(node.right, path);
     }
   };
 
-  getPath(root, "");
+  getPath(root, '');
+
   return result;
 };

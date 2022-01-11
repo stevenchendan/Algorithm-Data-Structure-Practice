@@ -3,12 +3,12 @@
  * @param {string} t
  * @return {boolean}
  */
-var isOneEditDistance = function (s, t) {
+const isOneEditDistance = function (s, t) {
   const longer = s.length > t.length ? s : t;
   const shorter = s.length > t.length ? t : s;
-  let count = 0,
-    slow = 0,
-    fast = 0;
+  let count = 0;
+  let slow = 0;
+  let fast = 0;
 
   if (longer.length - shorter.length > 1) {
     return false;

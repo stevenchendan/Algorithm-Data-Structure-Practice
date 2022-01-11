@@ -23,13 +23,13 @@ const maxPathSum = function (root) {
       return 0;
     }
 
-    let maxLeft = Math.max(maxPath(root.left), 0);
-    let maxRight = Math.max(maxPath(root.right), 0);
-    let innerMax = maxLeft + root.val + maxRight;
+    const maxLeft = Math.max(maxPath(root.left), 0);
+    const maxRight = Math.max(maxPath(root.right), 0);
+    const innerMax = maxLeft + root.val + maxRight;
 
     maxSum = Math.max(innerMax, maxSum);
 
-    let outputMax = root.val + Math.max(maxLeft, maxRight);
+    const outputMax = root.val + Math.max(maxLeft, maxRight);
 
     return outputMax;
   };

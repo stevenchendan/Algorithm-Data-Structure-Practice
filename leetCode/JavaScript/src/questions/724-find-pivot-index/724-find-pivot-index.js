@@ -9,7 +9,7 @@ function pivotIndex(nums) {
   if (nums.length == 1) {
     return 0;
   }
-  let sum = nums.reduce((a, b) => a + b);
+  const sum = nums.reduce((a, b) => a + b);
   let presum = 0;
   for (let i = 0; i <= nums.length; i++) {
     if (sum - presum - nums[i] == presum) {
@@ -17,6 +17,7 @@ function pivotIndex(nums) {
     }
     presum += nums[i];
   }
+
   return -1;
 }
 

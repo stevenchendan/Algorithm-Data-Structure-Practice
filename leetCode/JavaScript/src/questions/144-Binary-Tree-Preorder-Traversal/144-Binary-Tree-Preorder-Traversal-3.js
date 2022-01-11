@@ -10,17 +10,25 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var preorderTraversal = function (root, result = []) {
-  if (root == undefined) {
+const preorderTraversal = function (root) {
+  if (!root) {
     return [];
   }
-  result.push(root.val);
-  if (root.left) {
-    preorderTraversal(root.left, result);
-  }
-  if (root.right) {
-    preorderTraversal(root.right, result);
-  }
+
+  const result = [];
+
+  const dfs = function (node) {
+    result.push(node.val);
+
+    if (node.left) {
+      dfs(node.left);
+    }
+    if (node.right) {
+      dfs(node.right);
+    }
+  };
+
+  dfs(root);
 
   return result;
 };

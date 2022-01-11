@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "extends": "airbnb",
+  "env": {},
+  "rules": {
+    "no-bitwise": "off",
+    "no-lonely-if": "off",
+    "class-methods-use-this": "off",
+    "arrow-body-style": "off",
+    "no-loop-func": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  }
+}

@@ -11,7 +11,7 @@
  * @param {Node} head
  * @return {Node}
  */
-var copyRandomList = function (head) {
+const copyRandomList = function (head) {
   if (!head) {
     return null;
   }

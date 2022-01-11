@@ -11,15 +11,15 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var rightSideView = function (root) {
+const rightSideView = function (root) {
   if (root === null) {
     return [];
   }
-  let result = [],
-    queue = [];
+  const result = [];
+  const queue = [];
   queue.push(root);
   while (queue.length !== 0) {
-    let length = queue.length;
+    let { length } = queue;
     const curLevel = [];
     while (length--) {
       const cur = queue.shift();

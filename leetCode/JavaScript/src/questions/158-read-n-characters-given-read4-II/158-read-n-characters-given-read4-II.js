@@ -13,7 +13,7 @@
  * @param {function} read4()
  * @return {function}
  */
-var solution = function (read4) {
+const solution = function (read4) {
   const temp = [];
   /**
    * @param {character[]} buf Destination buffer

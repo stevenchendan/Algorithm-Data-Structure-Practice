@@ -9,23 +9,23 @@ const minWindow = function (s, t) {
     return "";
   }
 
-  let targetOccurrence = {};
-  let windowOccurrence = {};
-  for (let c of t) {
+  const targetOccurrence = {};
+  const windowOccurrence = {};
+  for (const c of t) {
     targetOccurrence[c] = (targetOccurrence[c] || 0) + 1;
   }
-  let slow = 0,
-    fast = 0;
+  let slow = 0;
+  let fast = 0;
   let valid = 0;
-  let resultStart = 0,
-    resultLength = Number.MAX_VALUE;
+  let resultStart = 0;
+  let resultLength = Number.MAX_VALUE;
 
   while (fast < s.length) {
     const c = s[fast];
     fast++;
     if (targetOccurrence[c]) {
       windowOccurrence[c] = (windowOccurrence[c] || 0) + 1;
-      if (windowOccurrence[c] == targetOccurrence[c]) {
+      if (windowOccurrence[c] === targetOccurrence[c]) {
         valid++;
       }
     }

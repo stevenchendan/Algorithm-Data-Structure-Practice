@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/3sum/
+// https://leetcode.com/problems/3sum/
 
 /**
  * @param {number[]} nums
@@ -13,7 +13,7 @@ const threeSum = (nums) => {
   const res = [];
 
   for (let i = 0; i < nums.length - 2; i++) {
-    let n1 = nums[i];
+    const n1 = nums[i];
     if (n1 > 0) {
       break;
     }
@@ -25,8 +25,8 @@ const threeSum = (nums) => {
     let right = nums.length - 1;
 
     while (left < right) {
-      let n2 = nums[left],
-        n3 = nums[right];
+      const n2 = nums[left];
+      const n3 = nums[right];
 
       if (n1 + n2 + n3 === 0) {
         res.push([n1, n2, n3]);

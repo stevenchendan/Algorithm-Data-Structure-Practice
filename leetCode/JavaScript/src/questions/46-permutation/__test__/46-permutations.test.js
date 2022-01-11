@@ -1,7 +1,7 @@
-import permute from "../46-permutations";
+import permute from '../46-permutations';
 
-describe("permutation of distinct integers", () => {
-  it("return distinct permutation", () => {
+describe('permutation of distinct integers', () => {
+  it('return distinct permutation', () => {
     expect(permute([1, 2, 3])).toEqual([
       [1, 2, 3],
       [1, 3, 2],
@@ -12,7 +12,7 @@ describe("permutation of distinct integers", () => {
     ]);
   });
 
-  it("return distinct permutation of single item array", () => {
+  it('return distinct permutation of single item array', () => {
     expect(permute([1])).toEqual([[1]]);
   });
 });

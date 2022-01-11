@@ -3,9 +3,9 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
-var subsets = function (nums) {
-  const result = [],
-    path = [];
+const subsets = function (nums) {
+  const result = [];
+  const path = [];
 
   const backtracking = function (startIndex) {
     result.push(Array.from(path));
