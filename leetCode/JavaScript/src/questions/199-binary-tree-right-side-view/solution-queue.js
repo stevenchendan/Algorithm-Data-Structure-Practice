@@ -1,5 +1,4 @@
 /**
- * https://leetcode.com/problems/binary-tree-right-side-view/
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
  *     this.val = (val===undefined ? 0 : val)
@@ -12,18 +11,20 @@
  * @return {number[]}
  */
 const rightSideView = function (root) {
-  if (root === null) {
+  if (!root) {
     return [];
   }
+
   const result = [];
-  const queue = [];
-  queue.push(root);
-  while (queue.length !== 0) {
+  const queue = [root];
+
+  while (queue.length && root !== null) {
     let { length } = queue;
-    const curLevel = [];
     while (length--) {
       const cur = queue.shift();
-      curLevel.push(cur.val);
+      if (length === 0) {
+        result.push(cur.val);
+      }
       if (cur.left) {
         queue.push(cur.left);
       }
@@ -31,11 +32,7 @@ const rightSideView = function (root) {
         queue.push(cur.right);
       }
     }
-    result.push(curLevel);
   }
 
-  for (let i = 0; i < result.length; i++) {
-    result[i] = result[i].pop();
-  }
   return result;
 };
