@@ -11,7 +11,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-// Solution 3 bfs template solution
+// Solution 3 iteration
 const maxDepth = function (root) {
   if (root === null) {
     return null;
